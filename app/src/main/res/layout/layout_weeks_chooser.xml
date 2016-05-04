@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/half_transport_color"
+                android:gravity="center"
+                android:paddingBottom="50dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:paddingTop="50dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@drawable/border"
+        android:orientation="vertical"
+        >
+
+        <CheckBox
+            android:id="@+id/checkbox_one"
+            style="@style/weekChooser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:text="每周日"
+            />
+
+        <CheckBox
+            android:id="@+id/checkbox_two"
+            style="@style/weekChooser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:text="每周一"
+            />
+
+        <CheckBox
+            android:id="@+id/checkbox_three"
+            style="@style/weekChooser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:text="每周二"
+            />
+
+        <CheckBox
+            android:id="@+id/checkbox_four"
+            style="@style/weekChooser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:text="每周三"
+            />
+
+        <CheckBox
+            android:id="@+id/checkbox_five"
+            style="@style/weekChooser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:text="每周四"
+            />
+
+        <CheckBox
+            android:id="@+id/checkbox_six"
+            style="@style/weekChooser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:text="每周五"
+            />
+
+        <CheckBox
+            android:id="@+id/checkbox_seven"
+            style="@style/weekChooser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:text="每周六"
+            />
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="20dp"
+            >
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_bg"
+                android:shadowRadius="10"
+                android:text="取消"
+                android:textColor="@android:color/white"
+                />
+
+            <Button
+                android:id="@+id/btn_sure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_bg"
+                android:shadowRadius="10"
+                android:text="确定"
+                android:textColor="@android:color/white"
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

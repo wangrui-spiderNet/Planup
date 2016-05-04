@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="transparent">#00000000</color>
+    <color name="transparent_color">#000000</color>
+    <color name="tagview_text_color">#ACAFC0</color>
+    <color name="tagview_text_color_selected">#F13926</color>
+    <color name="tagview_bg_color">#00000000</color>
+    <color name="tagview_border_color">#ACAFC0</color>
+
+    <color name="add_tag_listview_filter_selector_color">#00FAFAFA</color>
+    <color name="add_tag_listview_filter_nol_color">#00000000</color>
+
+    <color name="advise_listview_filter_selector_color">#00000000</color>
+    <color name="advise_listview_filter_nol_color">#00000000</color>
+    <color name="navpage">#FFE1E8EB</color>
+
+    <!--灰色线条-->
+    <color name="gray_line_color" >#DADADA</color>
+    <color name="light_gray_line_color">#DBDBDB</color>
+    <color name="gray_color">#808080</color>
+    <color name="look_more_info_color">#999999</color>
+    <color name="create_date_line_color">#DDDDDD</color>
+    <color name="edit_expert_info_text_color">#5A5A5A</color>
+
+    <!--首页背景颜色-->
+    <color name="home_bg_color">#EEEEEE</color>
+    <color name="home_bg_light_gray_color">#f0f0f0</color>
+
+    <!--半透明背景-->
+    <color name="half_transport_color">#60000000</color>
+    <color name="dark_gray_transport_bg_color">#e0000000</color>
+
+    <!--标准颜色值-->
+    <color name="orange_red">#f65131</color>
+    <color name="dark_gray">#171717</color>
+    <color name="middel_gray">#9e9e9e</color>
+    <color name="blue_gray">#acafc0</color>
+    <color name="light_gray">#eeeeee</color>
+    <color name="member_yellow">#ffb801</color>
+    <color name="expert_blue">#039bda</color>
+    <color name="unchecked_red">#FBC2BC</color>
+    <color name="checked_red">#F65435</color>
+    <color name="blue_green">#0FC4C2</color>
+
+    <!--标题颜色值-->
+    <color name="dark_black">#29292a</color>
+
+    <!--我_用户_专家_界面色值-->
+    <color name="me_card_bg">#FCFCFC</color>
+    <color name="me_user_count_text">#929293</color>
+    <color name="expert_content">#4D4D4D</color>
+    <color name="expert_title">#1A1A1A</color>
+    <color name="expert_info">#212121</color>
+    <color name="comment_time">#BFBFBF</color>
+
+    <!--ZXing色值-->
+    <color name="bg_color">#EDEDED</color>
+    <color name="contents_text">#ff000000</color>
+    <color name="encode_view">#ffffffff</color>
+    <color name="help_button_view">#ffcccccc</color>
+    <color name="help_view">#ff404040</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="result_image_border">#ffffffff</color>
+    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="result_points">#c000ff00</color>
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="sbc_header_text">#ff808080</color>
+    <color name="sbc_header_view">#ffffffff</color>
+    <color name="sbc_list_item">#fffff0e0</color>
+    <color name="sbc_layout_view">#ffffffff</color>
+    <color name="sbc_page_number_text">#ff000000</color>
+    <color name="sbc_snippet_text">#ff4b4b4b</color>
+    <color name="share_text">#ff000000</color>
+    <color name="share_view">#ffffffff</color>
+    <color name="status_view">#50000000</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="header">#58567D</color>
+    <color name="grgray">#686868</color>
+    <!-- 我的页面-->
+    <color name="type_color">#333333</color>
+    <color name="me_bg_color">#f8f8f8</color>
+    <color name="gray">#999999</color>
+    <color name="line_color">#DBDBDB</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="red">#FF0000</color>
+    <color name="cancel_search_color">#F95025</color>
+    <!--tag color-->
+    <color name="tag_text_color">#B1BECB</color>
+    <color name="discover_page_title">#000000</color>
+
+    <!--收藏页-->
+    <color name="collect_top_bar">#F8F8F8</color>
+    <!--底部icon-->
+    <color name="footbar_selected_color">#645353</color>
+    <color name="footbar_unselected_color">#aea8a8</color>
+    <!--行业设置页-->
+    <color name="industry_content">#4C4C4C</color>
+    <color name="industry_checked">#F95025</color>
+    <!--献计页-->
+    <color name="waiting_for_advice_text_color">#666666</color>
+    <color name="advice_tag_text_color">#ACB8C6</color>
+    <color name="advice_question_info_text_color">#1C6BB9</color>
+    <color name="advice_deatil_page_question_text_colr">#1469BC</color>
+    <color name="advice_detail_time_color">#C2C2C2</color>
+    <color name="advice_detail_line_color">#C2C2C2</color>
+
+    <color name="expert_item_bg">#FAFAFA</color>
+    <color name="professional_field_detail_page_top_text_color">#6C747A</color>
+    <color name="professional_field_detail_page_industry_child_view_bg">#F3F3F3</color>
+    <color name="industry_or_field_text_color">#565C61</color>
+    <color name="card_interval_color">#E6E6E6</color>
+    <color name="home_page_card_tag_text_color">#F3523A</color>
+    <color name="search_no_result_tip_text_color">#5A5A5A</color>
+
+    <!--创建问题页面-->
+    <color name="create_question_tip_color">#9593B6</color>
+    <color name="create_question_chose_count_color">#F4523A</color>
+
+    <!--创建约谈界面-->
+    <color name="pay_price_color">#3E474A</color>
+
+    <!-- 应用主题色 -->
+    <color name="maincolor">#21b38a</color>
+    <color name="maincolordark">#129872</color>
+    <color name="sidebar_letter_normal">#202020</color>
+    <color name="sidebar_letter_pressed">#21b38a</color>
+    <!-- 白色 -->
+    <color name="all_white">#ffffff</color>
+    <!-- 黑色 -->
+    <color name="all_black">#000000</color>
+    <!-- 浅灰 -->
+    <color name="lightgrey">#D6D6D6</color>
+    <color name="deep_gray">#989898</color>
+    <color name="grey">#8B8989</color>
+    <color name="parent_dialog_bg">#EDEDED</color>
+    <color name="startcolor">#21b38a</color>
+    <color name="login_out_sea">#5C54A2</color>
+
+
+    <color name="main_color">#03C0C6</color>
+</resources>

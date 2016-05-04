@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="81dp"
+                android:orientation="horizontal"
+    >
+
+    <LinearLayout
+        android:id="@+id/layout_time"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/plan_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="2016-05-03"
+            android:textColor="@color/main_color"/>
+
+        <TextView
+            android:id="@+id/plan_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="星期二"
+            android:textColor="@color/main_color"/>
+
+        <TextView
+            android:id="@+id/plan_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="15:31"
+            android:textColor="@color/main_color"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_toRightOf="@+id/layout_time"
+        android:orientation="horizontal"
+        >
+
+        <View
+            android:id="@+id/seporate_line"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/layout_time"
+            android:background="@color/gray_line_color"
+            ></View>
+
+        <TextView
+            android:id="@+id/plan_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:gravity="center_vertical"
+            android:maxLines="3"
+            android:text="計劃一百萬"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gray_line_color"
+        ></View>
+
+</RelativeLayout>
