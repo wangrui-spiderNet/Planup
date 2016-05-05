@@ -146,6 +146,7 @@
     <color name="startcolor">#21b38a</color>
     <color name="login_out_sea">#5C54A2</color>
 
-
+    <color name="backgroundColor">#E8E8E0</color>
+    <color name="backgroundColorPress">#DBDBD3</color>
     <color name="main_color">#03C0C6</color>
 </resources>

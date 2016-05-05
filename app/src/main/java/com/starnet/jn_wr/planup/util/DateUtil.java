@@ -24,7 +24,7 @@ public class DateUtil {
     public static final String TIME_FORMAT_SEPERATOR="yyyy/MM/dd";
     public static final String TIME_FORMAT_LINE="yyyy-MM-dd HH:mm";
 
-    public static final String[] WEEKS={"周日","周一","周二","周三","周四","周五","周六"};
+    public static final String[] WEEKS={"星期日","星期一","星期二","星期三","星期四","星期五","星期六"};
 
     public static final long oneday = 0x5265c00L;
     private static final SimpleDateFormat sdf = new SimpleDateFormat(TIME_FORMAT_CH);

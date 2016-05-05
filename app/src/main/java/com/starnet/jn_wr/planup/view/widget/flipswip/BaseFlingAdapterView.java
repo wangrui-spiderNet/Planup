@@ -1,4 +1,4 @@
-package com.starnet.jn_wr.planup.flipswip;
+package com.starnet.jn_wr.planup.view.widget.flipswip;
 
 import android.content.Context;
 import android.util.AttributeSet;

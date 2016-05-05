@@ -4,11 +4,14 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <ListView
+    <com.starnet.jn_wr.planup.view.widget.xlistview.XListView
         android:id="@+id/lv_plans"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:dividerHeight="0dp"
+        android:divider="@android:color/transparent"
+        >
 
-    </ListView>
+    </com.starnet.jn_wr.planup.view.widget.xlistview.XListView>
 
 </LinearLayout>

@@ -20,14 +20,20 @@ import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.starnet.jn_wr.planup.PlanupApplication;
+import com.starnet.jn_wr.planup.PuConstants;
 import com.starnet.jn_wr.planup.R;
+import com.starnet.jn_wr.planup.entity.Plan;
 import com.starnet.jn_wr.planup.util.DateUtil;
+import com.starnet.jn_wr.planup.util.GsonUtil;
+import com.starnet.jn_wr.planup.util.SdcardUtil;
+import com.starnet.jn_wr.planup.util.StringUtil;
 import com.starnet.jn_wr.planup.util.SystemUtil;
 import com.starnet.jn_wr.planup.util.ToastUtil;
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
 import com.wdullaer.materialdatetimepicker.time.RadialPickerLayout;
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
-
+import java.util.Date;
 import java.util.Calendar;
 import java.util.Iterator;
 import java.util.TreeMap;
@@ -47,6 +53,8 @@ public class AddPlanActivity extends BaseActivity implements TimePickerDialog.On
     private int select_day;
     private int select_hour;
     private int select_minute;
+    private String date;
+    private long timelong;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +73,7 @@ public class AddPlanActivity extends BaseActivity implements TimePickerDialog.On
         et_content = (EditText) findViewById(R.id.et_content);
         layout_repeat = (RelativeLayout) findViewById(R.id.layout_repeat);
         tv_time.setText(DateUtil.getCurrentTime("yyyy-MM-dd HH:mm ") + "(" + DateUtil.WEEKS[Calendar.getInstance().get(Calendar.DAY_OF_WEEK) - 1] + ")");
+        timelong =new Date().getTime();
     }
 
     private void addListener() {
@@ -91,7 +100,7 @@ public class AddPlanActivity extends BaseActivity implements TimePickerDialog.On
         });
     }
 
-    private String date;
+
 
     @Override
     public void onDateSet(DatePickerDialog view, int year, int monthOfYear, int dayOfMonth) {
@@ -104,7 +113,7 @@ public class AddPlanActivity extends BaseActivity implements TimePickerDialog.On
     @Override
     public void onTimeSet(RadialPickerLayout view, int hourOfDay, int minute, int second) {
         try {
-            long timelong = DateUtil.stringToDateLong(date + hourOfDay + ":" + minute, DateUtil.TIME_FORMAT_LINE);
+            timelong = DateUtil.stringToDateLong(date + hourOfDay + ":" + minute, DateUtil.TIME_FORMAT_LINE);
             Calendar calendar = Calendar.getInstance();
             calendar.setTimeInMillis(timelong);
 
@@ -129,12 +138,41 @@ public class AddPlanActivity extends BaseActivity implements TimePickerDialog.On
 
         if (iv_right == view) {
 
+            if(checkValues()){
+                savePlan();
+            }
+
         } else if (iv_left == view) {
             onBackPressed();
         } else if (tv_time == view) {
             showDateChooser();
         } else if (layout_repeat == view) {
             showPopwindow();
+        }
+    }
+
+    private void savePlan(){
+        Plan plan=new Plan();
+        plan.setActtime(""+timelong);
+        plan.setContent(et_content.getText().toString());
+        plan.setIscomplete(false);
+        plan.setRepeatDays(tv_repeat_weeks.getText().toString());
+
+        SdcardUtil.creatFile(PlanupApplication.getInstance(), PuConstants.FIRST_FONDER, PuConstants.SECOND_FONDER);
+        SdcardUtil.writeIntoSDcard(
+                PlanupApplication.getInstance(),
+                PuConstants.FIRST_FONDER, PuConstants.SECOND_FONDER,
+                plan.getActtime(),
+                GsonUtil.getInstance().toJson(plan));
+
+        onBackPressed();
+    }
+
+    private boolean checkValues(){
+        if(!StringUtil.isEmpty(et_content.getText().toString())){
+            return true;
+        }else{
+            return false;
         }
     }
 
