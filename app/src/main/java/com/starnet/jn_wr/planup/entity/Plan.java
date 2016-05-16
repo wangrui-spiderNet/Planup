@@ -6,9 +6,28 @@ package com.starnet.jn_wr.planup.entity;
 public class Plan {
     private String id;
     private String acttime;
+    private String ct;
     private String content;
     private String repeatDays;
-    private boolean iscomplete;
+    private int type;
+
+    public String getCt() {
+        return ct;
+    }
+
+    public void setCt(String ct) {
+
+
+        this.ct = ct;
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
+    }
 
     public String getId() {
         return id;
@@ -42,11 +61,4 @@ public class Plan {
         this.content = content;
     }
 
-    public boolean iscomplete() {
-        return iscomplete;
-    }
-
-    public void setIscomplete(boolean iscomplete) {
-        this.iscomplete = iscomplete;
-    }
 }

@@ -72,16 +72,18 @@ public class JNHomeFrontPageFragment extends BaseFragment {
         mHandler.post(new Runnable() {
             @Override
             public void run() {
-                File[] files= SdcardUtil.fileExplorer(PlanupApplication.getInstance(), PuConstants.FIRST_FONDER,PuConstants.SECOND_FONDER);
+//                File[] files= SdcardUtil.fileExplorer(PlanupApplication.getInstance(), PuConstants.FIRST_FONDER,PuConstants.SECOND_FONDER);
+//
+//                if(files!=null){
+//                    for (int i=0;i<files.length;i++){
+//                        File file=files[i];
+//                        String plan_str = SdcardUtil.readBufferFile(PlanupApplication.getInstance(),PuConstants.FIRST_FONDER,PuConstants.SECOND_FONDER,file.getName());
+//                        Plan plan= GsonUtil.getInstance().fromJson(plan_str,Plan.class);
+//                        plans.add(plan);
+//                    }
+//                }
 
-                if(files!=null){
-                    for (int i=0;i<files.length;i++){
-                        File file=files[i];
-                        String plan_str = SdcardUtil.readBufferFile(PlanupApplication.getInstance(),PuConstants.FIRST_FONDER,PuConstants.SECOND_FONDER,file.getName());
-                        Plan plan= GsonUtil.getInstance().fromJson(plan_str,Plan.class);
-                        plans.add(plan);
-                    }
-                }
+                plans.addAll(db.getPlans());
 
                 lvPlan.stopRefresh();
                 lvPlan.stopLoadMore();

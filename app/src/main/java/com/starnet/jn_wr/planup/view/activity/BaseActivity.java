@@ -7,6 +7,8 @@ import android.support.v4.app.FragmentActivity;
 import android.util.DisplayMetrics;
 import android.view.View;
 
+import com.starnet.jn_wr.planup.db.PUDatabaseDao;
+
 public class BaseActivity extends FragmentActivity implements View.OnClickListener {
 
     public Context appContext;
@@ -14,6 +16,7 @@ public class BaseActivity extends FragmentActivity implements View.OnClickListen
     protected int width;
     protected int height;
 
+    public PUDatabaseDao db;
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
@@ -28,6 +31,7 @@ public class BaseActivity extends FragmentActivity implements View.OnClickListen
         super.onCreate(savedInstanceState);
         appContext = getApplicationContext();
 
+        db=PUDatabaseDao.getInstance(this);
         getDisplay();
     }
 

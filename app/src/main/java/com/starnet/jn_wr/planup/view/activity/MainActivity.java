@@ -86,7 +86,7 @@ public class MainActivity extends BaseActivity implements ViewPager.OnPageChange
         iconRespress = new int[]{R.drawable.main_bottom_bar_home_press, R.drawable.main_bottom_bar_advise_press,
                 R.drawable.main_bottom_bar_discover_press, R.drawable.main_bottom_bar_me_press};
 
-        common_layout_title=(RelativeLayout) findViewById(R.id.title);
+        common_layout_title=(RelativeLayout) findViewById(R.id.common_layout_title);
     }
 
     private void initListner(){

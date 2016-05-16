@@ -2,12 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="81dp"
+              android:orientation="vertical"
     >
 
     <com.starnet.jn_wr.planup.view.widget.swipe.SwipeLayout
         android:id="@+id/swipe"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="80dp"
         >
 
         <LinearLayout
@@ -35,7 +36,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/item_selector"
             android:orientation="horizontal"
             android:padding="6dp">
 
@@ -80,13 +80,13 @@
                 android:orientation="horizontal"
                 >
 
-                <View
+                <TextView
                     android:id="@+id/seporate_line"
                     android:layout_width="1dp"
                     android:layout_height="match_parent"
                     android:layout_toRightOf="@+id/layout_time"
                     android:background="@color/gray_line_color"
-                    ></View>
+                    ></TextView>
 
                 <TextView
                     android:id="@+id/plan_content"
@@ -97,15 +97,13 @@
                     android:maxLines="3"
                     android:text="计划一百万"/>
             </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:layout_gravity="bottom"
-                android:background="@color/gray_line_color"
-                ></View>
-
         </LinearLayout>
-
     </com.starnet.jn_wr.planup.view.widget.swipe.SwipeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_line_color"
+        ></TextView>
+
 </LinearLayout>

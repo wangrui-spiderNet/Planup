@@ -100,8 +100,6 @@ public class AddPlanActivity extends BaseActivity implements TimePickerDialog.On
         });
     }
 
-
-
     @Override
     public void onDateSet(DatePickerDialog view, int year, int monthOfYear, int dayOfMonth) {
         date = year + "-" + (monthOfYear+1 ) + "-" + dayOfMonth + "  ";
@@ -153,17 +151,20 @@ public class AddPlanActivity extends BaseActivity implements TimePickerDialog.On
 
     private void savePlan(){
         Plan plan=new Plan();
-        plan.setActtime(""+timelong);
+        plan.setActtime("" + timelong);
         plan.setContent(et_content.getText().toString());
-        plan.setIscomplete(false);
         plan.setRepeatDays(tv_repeat_weeks.getText().toString());
+        plan.setCt("" + new Date().getTime());
+        plan.setId("" + timelong);
 
-        SdcardUtil.creatFile(PlanupApplication.getInstance(), PuConstants.FIRST_FONDER, PuConstants.SECOND_FONDER);
-        SdcardUtil.writeIntoSDcard(
-                PlanupApplication.getInstance(),
-                PuConstants.FIRST_FONDER, PuConstants.SECOND_FONDER,
-                plan.getActtime(),
-                GsonUtil.getInstance().toJson(plan));
+        db.savePlan(plan);
+
+//        SdcardUtil.creatFile(PlanupApplication.getInstance(), PuConstants.FIRST_FONDER, PuConstants.SECOND_FONDER);
+//        SdcardUtil.writeIntoSDcard(
+//                PlanupApplication.getInstance(),
+//                PuConstants.FIRST_FONDER, PuConstants.SECOND_FONDER,
+//                plan.getActtime(),
+//                GsonUtil.getInstance().toJson(plan));
 
         onBackPressed();
     }
